@@ -27,7 +27,10 @@ npm run build      # typecheck + production build into dist/
 
 ## Deploy
 
-Static build, no environment variables. `vercel.json` sets build `npm run build` and output `dist`.
+Static build, no environment variables. `vercel.json` sets build `npm run build`, output `dist`, and the install command
+`ONNXRUNTIME_NODE_INSTALL_CUDA=skip npm install`. Transformers.js depends on `onnxruntime-node`, whose install script
+tries to download CUDA binaries on Linux and fails on Vercel (404). The site only uses `onnxruntime-web`, so it is skipped.
+On other Linux CI, use the same install command.
 
 ```bash
 npx vercel --prod
