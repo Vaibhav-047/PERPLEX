@@ -23,7 +23,7 @@ const store = {
   get: () => { try { return localStorage.getItem(STORE); } catch { return null; } },
   set: (v: string) => { try { localStorage.setItem(STORE, v); } catch { /* ignore */ } },
 };
-const SOURCE_URL = 'https://github.com/Vaibhav-047/perplex-terrain';
+const SOURCE_URL = 'https://github.com/Vaibhav-047/PERPLEX';
 const SUPPORTED = typeof Worker !== 'undefined' && typeof WebAssembly === 'object';
 const UNSUPPORTED = "This browser can't run the model here (it needs Web Workers and WebAssembly). The Lab below always works.";
 

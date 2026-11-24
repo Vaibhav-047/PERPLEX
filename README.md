@@ -97,5 +97,4 @@ next to the JavaScript, so nothing but the model weights is fetched from a third
   The app's own WASM path for Accurate ran only with the older int8 file.
 - **Model quality beyond one sentence.** Each model/dtype was compared on "The capital of France is Paris" only.
 - **Screen readers.** ARIA roles, labels and live regions are in place, but no screen reader (VoiceOver, NVDA) was used.
-- **The "Source" link** points to `https://github.com/Vaibhav-047/perplex-terrain`, which does not exist yet (404). Set `SOURCE_URL` in `src/App.tsx`.
 - Cache behaviour across browser restarts, and a deploy to Vercel itself.
